@@ -8,7 +8,8 @@ class PostForm extends Component {
     const data = {
       id: new Date(),
       name,
-      typing
+      typing,
+      editing:false
     }
     this.props.dispatch({
         type:'ADD_POST',
@@ -18,15 +19,13 @@ class PostForm extends Component {
   }
 render() {
 return (
-<div>
-  <h1>Add Pokemon</h1>
-  <form onSubmit={this.handleSubmit}>
-   <input required type="text" ref={(input)=>this.getName = input} 
-    placeholder="Enter Pokemon Name"/>
-   <br /><br />
-   <textarea required rows="5" ref={(input)=>this.getTyping = input} cols="28" 
-    placeholder="Enter typing" />
-   <br /><br />
+<div className="post-container">
+  <h1 className="post_heading">Add Pokemon</h1>
+  <form className="form" onSubmit={this.handleSubmit} >
+   <input required type="text" ref={(input) => this.getName = input}
+   placeholder="Enter Pokemon Name" /><br /><br />
+   <textarea required rows="5" ref={(input) => this.getTyping = input}
+   cols="28" placeholder="Enter Type" /><br /><br />
    <button>Save</button>
   </form>
 </div>
