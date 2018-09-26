@@ -24,8 +24,8 @@ return (
   <form className="form" onSubmit={this.handleSubmit} >
    <input required type="text" ref={(input) => this.getName = input}
    placeholder="Enter Pokemon Name" /><br /><br />
-   <textarea required rows="5" ref={(input) => this.getTyping = input}
-   cols="28" placeholder="Enter Type" /><br /><br />
+   <input required type="text" ref={(input) => this.getTyping = input}
+   placeholder="Enter Type" /><br /><br />
    <button>Save</button>
   </form>
 </div>
