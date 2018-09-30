@@ -5,10 +5,14 @@ class PostForm extends Component {
     e.preventDefault();
     const name = this.getName.value;
     const typing =  this.getTyping.value;
+    const no = this.getNo.value;
+    const baseStat = this.getBaseStat.value;
     const data = {
       id: new Date(),
       name,
       typing,
+      no,
+      baseStat,
       editing:false
     }
     this.props.dispatch({
@@ -16,6 +20,8 @@ class PostForm extends Component {
         data});
       this.getName.value = '';
       this.getTyping.value = '';
+      this.getNo.value = '';
+      this.getBaseStat.value = '';
   }
 render() {
 return (
@@ -25,7 +31,11 @@ return (
    <input required type="text" ref={(input) => this.getName = input}
    placeholder="Enter Pokemon Name" /><br /><br />
    <input required type="text" ref={(input) => this.getTyping = input}
+   placeholder="Enter Pokedex No." /><br /><br />
+   <input required type="text" ref={(input) => this.getNo = input}
    placeholder="Enter Type" /><br /><br />
+   <input required type="text" ref={(input) => this.getBaseStat = input}
+   placeholder="Enter Base Stats Total" /><br /><br />
    <button>Save</button>
   </form>
 </div>
