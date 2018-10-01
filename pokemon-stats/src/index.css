@@ -184,3 +184,7 @@ body {
   outline: none;
   color:#fff;
   }
+
+  .save {
+    cursor:pointer
+  }

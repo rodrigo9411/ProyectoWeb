@@ -36,7 +36,7 @@ return (
    placeholder="Enter Type" /><br /><br />
    <input required type="text" ref={(input) => this.getBaseStat = input}
    placeholder="Enter Base Stats Total" /><br /><br />
-   <button>Save</button>
+   <button className="save">Save</button>
   </form>
 </div>
 );
